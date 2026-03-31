@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+
 from .views import UserViewSet, TeamViewSet, ActivityViewSet, WorkoutViewSet, LeaderboardViewSet, api_root
+import os
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -30,3 +32,10 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('', api_root, name='api-root'),
 ]
+
+# Helper for API URL root in Codespaces
+def get_api_url(component):
+    codespace_name = os.environ.get('CODESPACE_NAME')
+    if codespace_name:
+        return f"https://{codespace_name}-8000.app.github.dev/api/{component}/"
+    return f"http://localhost:8000/api/{component}/"
