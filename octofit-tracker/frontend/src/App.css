@@ -1,0 +1,129 @@
+
+body {
+  background: linear-gradient(135deg, #f0f4f9 0%, #e0e7ff 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.App {
+  text-align: center;
+  color: #22223b;
+}
+
+.App-logo {
+  height: 60px;
+  width: auto;
+  pointer-events: none;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background: linear-gradient(90deg, #4f8cff 0%, #6ee7b7 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+.App-link, a {
+  color: #4f8cff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.App-link:hover, a:hover {
+  color: #22223b;
+}
+/* Navigation styles */
+.navbar {
+  background: linear-gradient(90deg, #4f8cff 0%, #6ee7b7 100%);
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+}
+.navbar-brand {
+  font-weight: bold;
+  color: #22223b !important;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.navbar-nav .nav-link {
+  color: #22223b !important;
+  font-weight: 500;
+  margin-right: 1rem;
+  transition: color 0.2s;
+}
+.navbar-nav .nav-link:hover {
+  color: #4f8cff !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #4f8cff;
+  font-weight: 700;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+  margin-bottom: 2rem;
+}
+th, td {
+  border: 1px solid #e0e7ff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+th {
+  background: #4f8cff;
+  color: #fff;
+}
+tr:nth-child(even) {
+  background: #f0f4f9;
+}
+
+/* Button styles */
+button, .btn {
+  background: linear-gradient(90deg, #4f8cff 0%, #6ee7b7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin: 0.25rem;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #6ee7b7 0%, #4f8cff 100%);
+  color: #22223b;
+}
+
+/* Utility for left-justified logo */
+.octofit-logo {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
